@@ -38,3 +38,44 @@ jobs:
 
 ```
 
+Explanation:
+Workflow Name:
+
+name: Simple Workflow
+This is the name of your GitHub Actions workflow.
+Trigger:
+
+ ```
+on:
+  push:
+    branches:
+      - main
+
+```
+This workflow is triggered on every push to the main branch.
+Job:
+```
+jobs:
+  build:
+    runs-on: ubuntu-latest
+```
+The workflow defines a job named build that runs on the latest version of the Ubuntu operating system.
+Steps:
+```
+steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v2
+```
+The first step (Checkout Repository) uses the actions/checkout action to fetch the contents of the repository, enabling subsequent steps to access the code.
+
+ ```
+- name: Run a simple command
+  run: echo "Hello, GitHub Actions!"
+```
+The second step (Run a simple command) executes a simple command, which is to echo the message "Hello, GitHub Actions!".
+
+Workflow Execution:
+When a push event occurs on the main branch, GitHub Actions will initiate this workflow.
+The build job runs on a virtual machine with the latest version of Ubuntu.
+The first step checks out the repository code.
+The second step echoes "Hello, GitHub Actions!" to the workflow log.
