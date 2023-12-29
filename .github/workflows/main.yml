@@ -5,14 +5,13 @@ on:
     branches:
       - main
 
-
 jobs:
   build:
-    runs-on:  ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    -name: Run a simple command
+    - name: Run a simple command
       run: echo "Hello, GitHub Actions!"
