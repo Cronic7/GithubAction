@@ -4,6 +4,6 @@ on:
 
 jobs:
   deploy:
-  runs-on: ununtu-latest
+  runs-on: ubuntu-latest
   setps: 
     -run: echo "Hello world!" 
