@@ -1,0 +1,9 @@
+name: Manual trigger workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+  runs-on: ununtu-latest
+  setps: 
+    -run: echo "Hello world!" 
